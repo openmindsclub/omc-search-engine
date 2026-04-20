@@ -1,9 +1,0 @@
-{
-	"id": "0urNL4qYV2AbdBk",
-	"json": "{\"id\":\"0urNL4qYV2AbdBk\",\"url\":\"https://weworkremotely.com//remote-jobs/search?sort=Any+Time\",\"loadedUrl\":\"https://weworkremotely.com//remote-jobs/search?sort=Any+Time\",\"uniqueKey\":\"https://weworkremotely.com//remote-jobs/search?sort=Any+Time\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"LISTING\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-20T18:11:15.494Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://weworkremotely.com//remote-jobs/search?sort=Any+Time",
-	"url": "https://weworkremotely.com//remote-jobs/search?sort=Any+Time"
-}

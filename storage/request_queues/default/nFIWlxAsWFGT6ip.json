@@ -1,9 +1,0 @@
-{
-	"id": "nFIWlxAsWFGT6ip",
-	"json": "{\"id\":\"nFIWlxAsWFGT6ip\",\"url\":\"https://weworkremotely.com//remote-jobs/toptal-senior-java-developer-microservices\",\"loadedUrl\":\"https://weworkremotely.com//remote-jobs/toptal-senior-java-developer-microservices\",\"uniqueKey\":\"https://weworkremotely.com//remote-jobs/toptal-senior-java-developer-microservices\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"DETAIL\",\"__crawlee\":{\"crawlDepth\":1,\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2026-04-20T18:11:18.710Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://weworkremotely.com//remote-jobs/toptal-senior-java-developer-microservices",
-	"url": "https://weworkremotely.com//remote-jobs/toptal-senior-java-developer-microservices"
-}
