@@ -10,4 +10,5 @@ type RawJob = {
   tags: string[];
   is_remote: boolean;
   location?: string;
+  link: string;
 };

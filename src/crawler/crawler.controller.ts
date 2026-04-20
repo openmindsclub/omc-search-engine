@@ -9,9 +9,29 @@ export class CrawlerController {
   @Get()
   @UseGuards(CrawlerGuard)
   async test() {
-    const results = await this.crawlerService.crawlRemoteOK();
-    console.log(results);
+    const [remoteOK, WWR] = await Promise.allSettled([
+      this.crawlerService.crawlRemoteOK(),
+      this.crawlerService.crawlWWR(),
+    ]);
 
-    return JSON.stringify(this.crawlerService.getDescriptions(), null, 2);
+    const saves: Promise<number>[] = [];
+
+    if (remoteOK.status === 'fulfilled') {
+      saves.push(this.crawlerService.saveJobs(remoteOK.value));
+    }
+
+    if (WWR.status === 'fulfilled') {
+      saves.push(this.crawlerService.saveJobs(WWR.value));
+    }
+
+    const [remoteOkResults, wwrResults] = await Promise.all(saves);
+    return {
+      status: 'success',
+      message: 'Crawled Successfully',
+      values: {
+        remoteOK: remoteOkResults,
+        wwr: wwrResults,
+      },
+    };
   }
 }

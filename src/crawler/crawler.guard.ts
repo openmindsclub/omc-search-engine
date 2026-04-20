@@ -14,7 +14,6 @@ export class CrawlerGuard implements CanActivate {
     const request = httpContext.getRequest<Request>();
     const authHeader = request.headers['authentication'];
 
-    console.log(authHeader);
     if (!authHeader) return false;
     const service_key = this.configService.get('CRAWLERS_SERVICE_KEY');
 
