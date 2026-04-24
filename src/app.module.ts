@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CrawlerModule } from './crawler/crawler.module';
+import { SearchModule } from './search/search.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { CrawlerModule } from './crawler/crawler.module';
       synchronize: true,
     }),
     CrawlerModule,
+    SearchModule,
   ],
   controllers: [AppController],
   providers: [AppService],

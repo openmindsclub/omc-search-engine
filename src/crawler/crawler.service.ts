@@ -4,7 +4,7 @@ import { extractRequirements, extractSalary } from './crawler.data-extractor';
 import { DeepPartial, Repository } from 'typeorm';
 import { Job } from 'src/common/entities/job.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CheerioCrawler, HttpCrawler } from 'crawlee';
+import { CheerioCrawler } from 'crawlee';
 
 @Injectable()
 export class CrawlerService {
@@ -12,10 +12,6 @@ export class CrawlerService {
     @InjectRepository(Job)
     private readonly jobsRepository: Repository<Job>,
   ) {}
-
-  test() {
-    return 'Hello I am a crawler !!!';
-  }
 
   async crawlRemoteOK(): Promise<RawJob[]> {
     const response = await fetch('https://www.remoteok.com/api');
@@ -167,6 +163,7 @@ export class CrawlerService {
   async saveJobs(rawJobs: RawJob[]) {
     const jobs = rawJobs.map(
       (rJob): DeepPartial<Job> => ({
+        title: rJob.title,
         description: rJob.description,
         location: rJob.location,
         link: rJob.link,

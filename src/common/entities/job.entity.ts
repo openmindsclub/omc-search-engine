@@ -10,6 +10,9 @@ export class Job {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column({ nullable: true })
+  title: string;
+
   @Column('text')
   description: string;
 
